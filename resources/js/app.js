@@ -4,9 +4,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+window.$ = window.jQuery = require('jquery');
 require('./bootstrap');
-
 window.Vue = require('vue');
+$(document).foundation();
 
 /**
  * The following block of code may be used to automatically register your
