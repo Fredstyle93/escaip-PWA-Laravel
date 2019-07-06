@@ -109,7 +109,7 @@
             </div>
 
             <div class="off-canvas-content" data-off-canvas-content>
-            <!-- Your page content lives here -->
+            test
             </div>
 
         <div class="flex-center position-ref full-height">
