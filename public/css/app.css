@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@charset "UTF-8";
 
 /**
  * Foundation for Sites by ZURB
@@ -9443,5 +9443,42 @@ html.is-reveal-open body {
   .column-block > :last-child {
     margin-bottom: 0;
   }
+}
+
+.navbar {
+  display: -webkit-box;
+  display: flex;
+  height: 60px;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #fefefe;
+  box-shadow: 0px 2px 5px #e8e8e8;
+}
+
+.navbar .navbar-links {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .navbar-link img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.button {
+  background-color: blue;
+}
+
+.site-max-width,
+.navbar .navbar-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 

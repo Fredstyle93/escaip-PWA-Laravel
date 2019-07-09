@@ -1,9 +1,18 @@
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
 @import "settings";
 
 // Bootstrap
 @import "foundation";
+
+
+// Imports
+
+//Layouts
+@import "layouts/navbar.scss";
+
+//Common
+@import "common/btns.scss";
+@import "common/fonts.scss";
+@import "common/grid.scss";
+@import "common/variables.scss";
