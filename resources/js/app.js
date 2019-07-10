@@ -5,7 +5,7 @@
  */
 window.$ = window.jQuery = require('jquery');
 require('./bootstrap');
-// window.Vue = require('vue');
+window.Vue = require('vue');
 import './registerPrompt';
 
 $(document).foundation();
@@ -14,6 +14,7 @@ $(document).foundation();
 
 
 
+console.log('salut');
 
 
 
@@ -29,6 +30,11 @@ $(document).foundation();
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// const app = new Vue({
-//     el: '#app',
-// });
+Vue.component(
+    'test',
+    require('./components/Test.vue').default
+);
+
+const app = new Vue({
+    el: '#app',
+});
