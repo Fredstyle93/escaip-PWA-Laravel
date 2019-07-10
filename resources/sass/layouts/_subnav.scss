@@ -1,15 +1,15 @@
 .subnav-l{
     position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     display: flex;
-    height: 60px;
+    height: $subnavHeight;
     align-items: center;
 
     background-color: $white;
-    border-top: 1px solid #d4d4d4;
+    border-top: 1px solid $greyPale;
     // box-shadow: 0px 2px 5px #a7a7a7;
 
     .subnav-wrapper{
@@ -18,18 +18,23 @@
     }
 
     .subnav-links{
-        
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .subnav-link {
+        margin: 0 30px;
+        padding: 10px 12px;
+
+        &:hover{
+            background-color: $greyPale;
+            border-radius: 100%;
+        }
 
         img{
-            width: 30px;
-            height: 30px;
-            border-radius: 100%;
+            width: 20px;
+            height: 20px;
         }
     }
 }

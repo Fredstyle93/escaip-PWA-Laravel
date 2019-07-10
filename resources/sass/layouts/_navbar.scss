@@ -1,19 +1,22 @@
 .navbar-l{
     position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
 
     display: flex;
-    height: 60px;
+    height: $navbarHeight;
     align-items: center;
 
     background-color: $white;
-    box-shadow: 0px 2px 5px #e8e8e8;
+    box-shadow: 0px 2px 5px $greyPale;
 
     .navbar-wrapper{
         @extend .site-max-width;
-        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .navbar-links{
@@ -29,6 +32,21 @@
             width: 30px;
             height: 30px;
             border-radius: 100%;
+        }
+    }
+
+    .navbar-auth-link{
+        margin-right: 10px;
+        padding: 10px;
+        color: $primary;
+        font-weight: 600;
+        
+        &:last-child{
+            margin: 0;
+        }
+
+        &:hover{
+            background-color: rgba($primary, .1);
         }
     }
 }

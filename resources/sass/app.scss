@@ -8,7 +8,11 @@
 
 // Imports
 
+
+@import "common/variables.scss";
+
 //Layouts
+@import "layouts/content.scss";
 @import "layouts/navbar.scss";
 @import "layouts/subnav.scss";
 
@@ -16,4 +20,3 @@
 @import "common/btns.scss";
 @import "common/fonts.scss";
 @import "common/grid.scss";
-@import "common/variables.scss";

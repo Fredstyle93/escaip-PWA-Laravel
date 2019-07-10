@@ -9455,8 +9455,20 @@ html.is-reveal-open body {
   height: 60px;
   -webkit-box-align: center;
           align-items: center;
-  background-color: #fefefe;
-  box-shadow: 0px 2px 5px #e8e8e8;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px #d4d4d4;
+}
+
+.navbar-l .navbar-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .navbar-l .navbar-links {
@@ -9475,6 +9487,21 @@ html.is-reveal-open body {
   border-radius: 100%;
 }
 
+.navbar-l .navbar-auth-link {
+  margin-right: 10px;
+  padding: 10px;
+  color: #7C5EAD;
+  font-weight: 600;
+}
+
+.navbar-l .navbar-auth-link:last-child {
+  margin: 0;
+}
+
+.navbar-l .navbar-auth-link:hover {
+  background-color: rgba(124, 94, 173, 0.1);
+}
+
 .subnav-l {
   position: fixed;
   bottom: 0;
@@ -9482,10 +9509,10 @@ html.is-reveal-open body {
   right: 0;
   display: -webkit-box;
   display: flex;
-  height: 60px;
+  height: 50px;
   -webkit-box-align: center;
           align-items: center;
-  background-color: #fefefe;
+  background-color: #fff;
   border-top: 1px solid #d4d4d4;
 }
 
@@ -9495,14 +9522,23 @@ html.is-reveal-open body {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.subnav-l .subnav-link {
+  margin: 0 30px;
+  padding: 10px 12px;
+}
+
+.subnav-l .subnav-link:hover {
+  background-color: #d4d4d4;
+  border-radius: 100%;
 }
 
 .subnav-l .subnav-link img {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
+  width: 20px;
+  height: 20px;
 }
 
 .button {
@@ -9515,5 +9551,10 @@ html.is-reveal-open body {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-container {
+  margin-top: 60px;
 }
 

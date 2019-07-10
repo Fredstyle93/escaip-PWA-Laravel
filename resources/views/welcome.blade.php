@@ -5,57 +5,7 @@
 @endsection
 
 
-
-
-<!doctype html>
-<html lang="en">
-
-<head>
-    <title>Fabrice Garrec</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-
-
-</head>
-
-<body>
-    <section class="site-container">
-        <!-- --------------------------------- NAV BAR --------------------------------- -->
-        <section class="navbar-l">
-            <section class="navbar-wrapper">
-                <nav class="navbar-links">
-                    <a href="" class="navbar-link"><img src="images/icons/notifications.svg" alt=""></a>
-                    <a href="" class="navbar-link"><img src="images/icons/add.svg" alt=""></a>
-                    <a href="" class="navbar-link"><img src="images/users/profil.jpg" alt=""></a>
-                </nav> 
-            </section>
-        </section>
-
-        <!-- --------------------------------- CONTENT --------------------------------- -->
-
-        <section class="content">
-
-        </section>
-
-        <!-- --------------------------------- SUBNAV --------------------------------- -->
-
-        <section class="subnav-l">
-            <section class="subnav-wrapper">
-                <nav class="subnav-links">
-                    <a href="" class="subnav-link"><img src="images/icons/notifications.svg" alt=""></a>
-                    <a href="" class="subnav-link"><img src="images/icons/add.svg" alt=""></a>
-                    <a href="" class="subnav-link"><img src="images/users/profil.jpg" alt=""></a>
-                </nav> 
-            </section>
-        </section>
-    </section>
-</body>
-
-</html>
+    
 
 
 

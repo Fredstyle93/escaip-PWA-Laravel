@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('layouts.head')
 <body>
-    <div id="app">
+    {{--  <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -55,8 +55,47 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @yield('main')
         </main>
-    </div>
+    </div>  --}}
+    <section class="site-container">
+            <!-- --------------------------------- NAV BAR --------------------------------- -->
+            <section class="navbar-l">
+                <section class="navbar-wrapper">
+                    @auth
+                        <nav class="navbar-links">
+                            <a href="" class="navbar-link"><img src="images/icons/notifications.svg" alt=""></a>
+                            <a href="" class="navbar-link"><img src="images/icons/add.svg" alt=""></a>
+                            <a href="" class="navbar-link"><img src="images/users/profil.jpg" alt=""></a>
+                        </nav> 
+                    @else
+                        <a href="" class="navbar-logo"><img src="images/icons/escaip-logo.svg" alt=""></a>
+                        <nav class="navbar-auth-links">
+                            <a href="{{ route('login') }}" class="navbar-auth-link"> {{ __("Se connecter") }} </a>
+                            <a href="{{ route('register') }}" class="navbar-auth-link"> {{ __("S'inscrire") }} </a>
+                        </nav>
+                    @endguest
+                </section>
+            </section>
+    
+            <!-- --------------------------------- CONTENT --------------------------------- -->
+    
+            <section class="content">
+                @yield('main')
+            </section>
+    
+            <!-- --------------------------------- SUBNAV --------------------------------- -->
+    
+            <section class="subnav-l">
+                <section class="subnav-wrapper">
+                    <nav class="subnav-links">
+                        <a href="" class="subnav-link"><img src="images/icons/home.svg" alt=""></a>
+                        <a href="" class="subnav-link"><img src="images/icons/portfolio-icon.svg" alt=""></a>
+                        <a href="" class="subnav-link"><img src="images/icons/school-icon.svg" alt=""></a>
+                        <a href="" class="subnav-link"><img src="images/icons/calendar-icon.svg" alt=""></a>
+                    </nav> 
+                </section>
+            </section>
+        </section>
 </body>
 </html>
