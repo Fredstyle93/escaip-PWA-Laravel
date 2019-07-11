@@ -3,11 +3,12 @@
 @include('layouts.head')
 <body>
     <div id="app">
-        <section class="site-container">
+        <section class="site-wrapper">
             <!-- --------------------------------- NAV BAR --------------------------------- -->
             <section class="navbar-l">
                 <section class="navbar-wrapper">
                     @auth
+                        <a href="" class="navbar-logo"><img src="images/icons/escaip-logo.svg" alt=""></a>
                         <nav class="navbar-links">
                             <a href="" class="navbar-link"><img src="images/icons/notifications.svg" alt=""></a>
                             <a href="" class="navbar-link"><img src="images/icons/add.svg" alt=""></a>
@@ -22,12 +23,28 @@
                     @endguest
                 </section>
             </section>
-    
-            <!-- --------------------------------- CONTENT --------------------------------- -->
-    
-            <section class="content">
-                @yield('main')
-                <test></test>
+
+            <section class="site-content-wrapper">
+
+                <!-- --------------------------------- SIDEBAR --------------------------------- -->
+
+                <section class="sidebar-l">
+                    <section class="sidebar-wrapper">
+                        <nav class="sidebar-links">
+                            <a href="" class="sidebar-link {{\Request::is('home') ? 'is-active' : ''}}"><img src="images/icons/home.svg" alt=""></a>
+                            <a href="" class="sidebar-link {{\Request::is('projects') ? 'is-active' : ''}}"><img src="images/icons/portfolio-icon.svg" alt=""></a>
+                            <a href="" class="sidebar-link {{\Request::is('school') ? 'is-active' : ''}}"><img src="images/icons/school-icon.svg" alt=""></a>
+                            <a href="" class="sidebar-link {{\Request::is('calendar') ? 'is-active' : ''}}"><img src="images/icons/calendar-icon.svg" alt=""></a>
+                        </nav>
+                    </section>
+                </section>
+        
+                <!-- --------------------------------- CONTENT --------------------------------- -->
+        
+                <section class="content-l">
+                    @yield('main')
+                </section>
+
             </section>
     
             <!-- --------------------------------- SUBNAV --------------------------------- -->
@@ -35,10 +52,10 @@
             <section class="subnav-l">
                 <section class="subnav-wrapper">
                     <nav class="subnav-links">
-                        <a href="" class="subnav-link"><img src="images/icons/home.svg" alt=""></a>
-                        <a href="" class="subnav-link"><img src="images/icons/portfolio-icon.svg" alt=""></a>
-                        <a href="" class="subnav-link"><img src="images/icons/school-icon.svg" alt=""></a>
-                        <a href="" class="subnav-link"><img src="images/icons/calendar-icon.svg" alt=""></a>
+                        <a href="" class="subnav-link {{\Request::is('home') ? 'is-active' : ''}}"><img src="images/icons/home.svg" alt=""></a>
+                        <a href="" class="subnav-link {{\Request::is('projects') ? 'is-active' : ''}}"><img src="images/icons/portfolio-icon.svg" alt=""></a>
+                        <a href="" class="subnav-link {{\Request::is('school') ? 'is-active' : ''}}"><img src="images/icons/school-icon.svg" alt=""></a>
+                        <a href="" class="subnav-link {{\Request::is('calendar') ? 'is-active' : ''}}"><img src="images/icons/calendar-icon.svg" alt=""></a>
                     </nav> 
                 </section>
             </section>
@@ -46,7 +63,6 @@
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    {{-- <script src="{{asset('js/app.js')}}"></script> --}}
 </body>
 </html>
 

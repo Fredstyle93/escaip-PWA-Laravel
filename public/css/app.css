@@ -9445,6 +9445,10 @@ html.is-reveal-open body {
   }
 }
 
+.content-l {
+  max-width: calc((100% / 3) * 2);
+}
+
 .navbar-l {
   position: fixed;
   top: 0;
@@ -9471,7 +9475,18 @@ html.is-reveal-open body {
           align-items: center;
 }
 
+@media (max-width: 420px) {
+  .navbar-l .navbar-logo {
+    display: none;
+  }
+}
+
+.navbar-l .navbar-logo img {
+  width: 100px;
+}
+
 .navbar-l .navbar-links {
+  min-width: 150px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -9479,6 +9494,12 @@ html.is-reveal-open body {
           flex-direction: row;
   -webkit-box-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 420px) {
+  .navbar-l .navbar-links {
+    width: 100%;
+  }
 }
 
 .navbar-l .navbar-link img {
@@ -9502,18 +9523,42 @@ html.is-reveal-open body {
   background-color: rgba(124, 94, 173, 0.1);
 }
 
+.sidebar-l {
+  width: 200px;
+  max-width: calc(100% / 3);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .sidebar-l {
+    display: none;
+  }
+}
+
 .subnav-l {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-box;
-  display: flex;
-  height: 50px;
+  display: none;
+  height: 60px;
   -webkit-box-align: center;
           align-items: center;
   background-color: #fff;
   border-top: 1px solid #d4d4d4;
+}
+
+@media (max-width: 767px) {
+  .subnav-l {
+    display: -webkit-box;
+    display: flex;
+  }
 }
 
 .subnav-l .subnav-links {
@@ -9522,16 +9567,23 @@ html.is-reveal-open body {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .subnav-l .subnav-link {
-  margin: 0 30px;
   padding: 10px 12px;
 }
 
 .subnav-l .subnav-link:hover {
+  background-color: #d4d4d4;
+  border-radius: 100%;
+}
+
+.subnav-l .subnav-link.is-active {
   background-color: #d4d4d4;
   border-radius: 100%;
 }
@@ -9546,6 +9598,7 @@ html.is-reveal-open body {
 }
 
 .site-max-width,
+.site-content-wrapper,
 .navbar-l .navbar-wrapper,
 .subnav-l .subnav-wrapper {
   max-width: 1280px;
@@ -9554,7 +9607,7 @@ html.is-reveal-open body {
   padding: 0 20px;
 }
 
-.site-container {
+.site-wrapper {
   margin-top: 60px;
 }
 

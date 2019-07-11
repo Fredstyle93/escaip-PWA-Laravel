@@ -19,11 +19,26 @@
         align-items: center;
     }
 
-    .navbar-links{
+    .navbar-logo{
         
+        @media(max-width: 420px){
+            display: none;
+        }
+
+        img{
+            width: 100px;
+        }
+    }
+
+    .navbar-links{
+        min-width: 150px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        @media(max-width: 420px){
+            width: 100%;
+        }
     }
 
     .navbar-link {

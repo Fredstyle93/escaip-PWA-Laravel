@@ -5,6 +5,10 @@
     padding: 0 20px;
 }
 
-.site-container{
+.site-wrapper{
     margin-top: $navbarHeight;
+}
+
+.site-content-wrapper{
+    @extend .site-max-width;
 }
