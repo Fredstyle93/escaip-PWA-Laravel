@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('layouts.head')
 <body>
-    <div id="app">
+    <section id="app">
         <section class="site-wrapper">
             <!-- --------------------------------- NAV BAR --------------------------------- -->
             <section class="navbar-l">
@@ -28,7 +28,7 @@
 
                 <!-- --------------------------------- SIDEBAR --------------------------------- -->
 
-                <section class="sidebar-l">
+                <aside class="sidebar-l">
                     <section class="sidebar-wrapper">
                         <nav class="sidebar-links">
                             <a href="" class="sidebar-link {{\Request::is('home') ? 'is-active' : ''}}"><img src="images/icons/home.svg" alt=""></a>
@@ -37,7 +37,7 @@
                             <a href="" class="sidebar-link {{\Request::is('calendar') ? 'is-active' : ''}}"><img src="images/icons/calendar-icon.svg" alt=""></a>
                         </nav>
                     </section>
-                </section>
+                </aside>
         
                 <!-- --------------------------------- CONTENT --------------------------------- -->
         
@@ -60,7 +60,7 @@
                 </section>
             </section>
         </section>
-    </div>
+    </section>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
