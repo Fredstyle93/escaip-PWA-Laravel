@@ -1,5 +1,14 @@
 .content-l {
-    // @extend .site-max-width;
-    max-width: calc((100% / 3) * 2);
-    // background-color: $greyPale;
+    width: calc(100% - 110px);
+    margin-left: 110px;
+    background-color: $greyPale;
+
+    @media(max-width: 1050px){
+        margin-left: 20px;
+    }
+
+    @media(max-width: 767px){
+        width: 100%;
+        margin-left: 0;
+    }
 }

@@ -6,6 +6,7 @@
 
     width: 200px;
     max-width: calc(100% / 3);
+    height: calc(100vh - $navbarHeight);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,5 +15,37 @@
 
     @media(max-width: 767px){
         display: none;
+    }
+
+    .sidebar-wrapper{
+        width: 100%;
+    }
+
+    .sidebar-links{
+        margin-left: -15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebar-link-container{
+        width: 100%;
+    }
+
+    .sidebar-link{
+        margin-bottom: 25px;
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: row;
+        border-radius: 6px;
+
+        &:hover{
+            background-color: $greyPale;
+        }
+
+        img{
+            margin-right: 15px;
+            max-width: 20px;
+        }
     }
 }
