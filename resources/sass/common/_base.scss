@@ -3,10 +3,21 @@
 }
 
 body{
+    min-height: 100vh;
     background-color: $white;
+    font-family: $fontText;
+    
+    #app {
+        min-height: inherit;
+    }
 }
+
 
 a, a:active, a:visited{
     color: $fontcolor;
     text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }

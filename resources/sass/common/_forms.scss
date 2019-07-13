@@ -1,0 +1,38 @@
+
+.form-group {
+    margin-bottom: 15px;
+
+    .form-label {
+        display: inline-block;
+    }
+    .sub-text{
+        display: inline-block;
+        font-size: 12px;
+
+        &:hover{
+            text-decoration: underline;
+            color: $primary;
+        }
+
+        &:before {
+            content: ' -';
+        }
+    }
+
+    .form-input-container {
+
+        .form-input {
+            background-color: #f2f2f2;
+            border: none;
+            border-radius: 5px;
+
+        }
+    }
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,3 +1,29 @@
 .button {
     background-color:blue;
 }
+
+.site-btn-primary {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary;
+    background-color: $primaryLight;
+    border: 1px solid $primaryLight;
+    border-radius: 5px;
+
+    &:hover {
+        opacity: .7;
+        cursor: pointer;
+    }
+}
+
+.site-link{
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

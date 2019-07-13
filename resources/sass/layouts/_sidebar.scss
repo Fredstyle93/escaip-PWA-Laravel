@@ -30,6 +30,7 @@
 
     .sidebar-link-container{
         width: 100%;
+        font-weight: 500;
     }
 
     .sidebar-link{
@@ -40,7 +41,12 @@
         border-radius: 6px;
 
         &:hover{
-            background-color: $greyPale;
+            // background-color: $greyPale;
+            background-color: #f1f1f1;
+        }
+        
+        &.is-active{
+            background-color: #f1f1f1;
         }
 
         img{

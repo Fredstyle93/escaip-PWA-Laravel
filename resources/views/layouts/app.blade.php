@@ -3,85 +3,33 @@
 @include('layouts.head')
 <body>
     <section id="app">
-        <section class="site-wrapper">
-            <!-- --------------------------------- NAV BAR --------------------------------- -->
-            <section class="navbar-l">
-                <section class="navbar-wrapper">
-                    @auth
-                        <a href="" class="navbar-logo"><img src="images/icons/escaip-logo.svg" alt=""></a>
-                        <nav class="navbar-links">
-                            <a href="" class="navbar-link"><img src="images/icons/notifications.svg" alt=""></a>
-                            <a href="" class="navbar-link"><img src="images/icons/add.svg" alt=""></a>
-                            <a href="" class="navbar-link"><img src="images/users/profil.jpg" alt=""></a>
-                        </nav> 
-                    @else
-                        <a href="" class="navbar-logo"><img src="images/icons/escaip-logo.svg" alt=""></a>
-                        <nav class="navbar-auth-links">
-                            <a href="{{ route('login') }}" class="navbar-auth-link"> {{ __("Se connecter") }} </a>
-                            <a href="{{ route('register') }}" class="navbar-auth-link"> {{ __("S'inscrire") }} </a>
-                        </nav>
-                    @endguest
-                </section>
-            </section>
-
-            <section class="site-content-wrapper">
-
-                <!-- --------------------------------- SIDEBAR --------------------------------- -->
-
-                <aside class="sidebar-l">
-                    <nav class="sidebar-wrapper">
-                        <ul class="sidebar-links">
-                            <a href="" class="sidebar-link-container {{\Request::is('home') ? 'is-active' : ''}}">
-                                <li class="sidebar-link">
-                                    <img src="images/icons/home.svg" alt=""> <span class="sidebar-link-text"> {{__('Accueil')}} </span> 
-                                </li>
-                            </a>
-                            <a href="" class="sidebar-link-container {{\Request::is('projects') ? 'is-active' : ''}}">
-                                <li class="sidebar-link">
-                                    <img src="images/icons/portfolio-icon.svg" alt=""> <span class="sidebar-link-text"> {{__('Projets')}} </span> 
-                                </li>
-                            </a>
-                            <a href="" class="sidebar-link-container {{\Request::is('school') ? 'is-active' : ''}}">
-                                <li class="sidebar-link">
-                                    <img src="images/icons/school-icon.svg" alt=""> <span class="sidebar-link-text"> {{__('Cours')}} </span> 
-                                </li>
-                            </a>
-                            <a href="" class="sidebar-link-container {{\Request::is('calendar') ? 'is-active' : ''}}">
-                                <li class="sidebar-link">
-                                    <img src="images/icons/calendar-icon.svg" alt=""> <span class="sidebar-link-text"> {{__('Calendriers')}} </span> 
-                                </li>
-                            </a>
-
-                            {{-- <a href="index.html" class="sidebar-menu-link">
-                                <li class="sidebar-menu-items sidebar-menu-items-selected">
-                                    <span class="sprite sprite-sidebar-home"></span> <span class="sidebar-menu-items-name">Accueil</span>
-                                </li>
-                            </a> --}}
-                        </ul>
-                    </nav>
-                </aside>
-        
-                <!-- --------------------------------- CONTENT --------------------------------- -->
-        
-                <section class="content-l">
+        @if (\Request::route()->getName() == 'login' || \Request::route()->getName() == 'register')
+            <section class="auth-wrapper">
+                <!-- --------------------------------- AUTH --------------------------------- -->
+                <section class="auth-l">
                     @yield('main')
                 </section>
+            </section>
+        @else
+            
+            <section class="site-wrapper">
+                <!-- --------------------------------- NAV BAR --------------------------------- -->
+                @include('layouts.navbar')
+                <section class="site-content-wrapper">
 
+                    <!-- --------------------------------- SIDEBAR --------------------------------- -->
+                    @include('layouts.sidebar')
+            
+                    <!-- --------------------------------- CONTENT --------------------------------- -->
+                    <section class="content-l">
+                        @yield('main')
+                    </section>
+                </section>    
+
+                <!-- --------------------------------- SUBNAV --------------------------------- -->
+                @include('layouts.subnav')
             </section>
-    
-            <!-- --------------------------------- SUBNAV --------------------------------- -->
-    
-            <section class="subnav-l">
-                <section class="subnav-wrapper">
-                    <nav class="subnav-links">
-                        <a href="" class="subnav-link {{\Request::is('home') ? 'is-active' : ''}}"><img src="images/icons/home.svg" alt=""></a>
-                        <a href="" class="subnav-link {{\Request::is('projects') ? 'is-active' : ''}}"><img src="images/icons/portfolio-icon.svg" alt=""></a>
-                        <a href="" class="subnav-link {{\Request::is('school') ? 'is-active' : ''}}"><img src="images/icons/school-icon.svg" alt=""></a>
-                        <a href="" class="subnav-link {{\Request::is('calendar') ? 'is-active' : ''}}"><img src="images/icons/calendar-icon.svg" alt=""></a>
-                    </nav> 
-                </section>
-            </section>
-        </section>
+        @endif
     </section>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
