@@ -1,15 +1,16 @@
 .content-l {
     width: 100%;
-    padding: 0 0 0 25px;
+    padding: 0 0 0 50px;
 
     @media(max-width: 767px){
         padding: 0px;
     }
 
-    .content-wrapper {
+    .content-card {
         background-color: $white;
-        // border: 1px solid $greyPale;
         box-shadow: $boxShadow;
         border-radius: 8px;
     }
+
+    
 }

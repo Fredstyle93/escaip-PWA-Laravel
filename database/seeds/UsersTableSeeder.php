@@ -13,7 +13,7 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         // Creation de 5 utilisateurs
-        factory(User::class, 5)->create();
+        factory(User::class, 50)->create();
 
         $userFred = new User();
         $userFred->name = "Frédéric";

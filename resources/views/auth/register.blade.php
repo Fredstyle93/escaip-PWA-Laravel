@@ -14,7 +14,7 @@
             </a>
         </div>
         <div class="auth-body">
-            <form class="auth-form" method="POST" action="{{ route('login') }}">
+            <form class="auth-form" method="POST" action="{{ route('register') }}">
                 @csrf
 
                 <div class="form-group">

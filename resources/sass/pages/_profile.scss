@@ -1,0 +1,31 @@
+.profile{
+    .profile-header{
+        @extend .card-wrapper;
+        position: relative;
+        min-height: 260px;
+        background-size: cover;
+        border-radius: 8px 8px 0px 0px;
+    }
+
+    .profile-body{
+
+        .profile-primary-infos{
+            position: relative;
+            @extend .card-wrapper;
+
+            img{
+                position: absolute;
+                top: -100px;
+                width: 180px;
+                border-radius: 100%;
+                border: 3px solid white;
+            }
+        }
+
+        .profile-name {
+            margin-left: 190px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+    }
+}

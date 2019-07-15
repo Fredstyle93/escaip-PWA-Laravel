@@ -9447,7 +9447,7 @@ html.is-reveal-open body {
 
 .content-l {
   width: 100%;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 50px;
 }
 
 @media (max-width: 767px) {
@@ -9456,7 +9456,7 @@ html.is-reveal-open body {
   }
 }
 
-.content-l .content-wrapper {
+.content-l .content-card {
   background-color: #fff;
   box-shadow: 0px 0px 9px #d4d4d4;
   border-radius: 8px;
@@ -9776,6 +9776,12 @@ h6 {
           flex-direction: row;
 }
 
+.card-wrapper,
+.profile .profile-body .profile-primary-infos,
+.profile .profile-header {
+  padding: 0 25px;
+}
+
 .auth-l {
   width: 100%;
   height: 100vh;
@@ -9858,5 +9864,30 @@ h6 {
           justify-content: space-between;
   -webkit-box-align: center;
           align-items: center;
+}
+
+.profile .profile-header {
+  position: relative;
+  min-height: 260px;
+  background-size: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.profile .profile-body .profile-primary-infos {
+  position: relative;
+}
+
+.profile .profile-body .profile-primary-infos img {
+  position: absolute;
+  top: -100px;
+  width: 180px;
+  border-radius: 100%;
+  border: 3px solid white;
+}
+
+.profile .profile-body .profile-name {
+  margin-left: 190px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
