@@ -9570,19 +9570,32 @@ html.is-reveal-open body {
           align-items: flex-start;
 }
 
+.sidebar-l .sidebar-links-wrapper {
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid gainsboro;
+}
+
+.sidebar-l .sidebar-links-wrapper:last-child {
+  border-bottom: 1px solid transparent;
+}
+
 .sidebar-l .sidebar-link-container {
   width: 100%;
+  margin-bottom: 20px;
+  display: block;
   font-weight: 500;
 }
 
 .sidebar-l .sidebar-link {
-  margin-bottom: 25px;
   padding: 10px 15px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
           flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
   border-radius: 6px;
 }
 
@@ -9597,6 +9610,12 @@ html.is-reveal-open body {
 .sidebar-l .sidebar-link img {
   margin-right: 15px;
   max-width: 20px;
+}
+
+.sidebar-l .sidebar-link .profile-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
 }
 
 .subnav-l {
