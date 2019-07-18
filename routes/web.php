@@ -12,13 +12,13 @@
 */
 
 
-$agent = new \Jenssegers\Agent\Agent;
-// $result = ;
-if($agent->isMobile() || $agent->isTablet()){
+// $agent = new \Jenssegers\Agent\Agent;
+// // $result = ;
+// if($agent->isMobile() || $agent->isTablet()){
 
-    Route::get('/{any}', 'AppController@index')->where('any', '.*');
+//     Route::get('/{any}', 'AppController@index')->where('any', '.*');
     
-} elseif ($agent->isDesktop()) {
+// } elseif ($agent->isDesktop()) {
 
     
     Auth::routes();
@@ -33,7 +33,7 @@ if($agent->isMobile() || $agent->isTablet()){
         Route::get('/profil', 'UsersController@showProfil')->name('profil');
     });
 
-}
+// }
 
 // Route::get('detect', function()
 // {
