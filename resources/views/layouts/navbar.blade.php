@@ -1,12 +1,12 @@
 <section class="navbar-l">
     <section class="navbar-wrapper">
-        <a href="" class="navbar-logo"><img src="images/icons/escaip-logo.svg" alt=""></a>
+        <a href="{{ Auth::user() ? route('home') : route('welcome')}}" class="navbar-logo"><img src="images/icons/escaip-logo.svg" alt=""></a>
         @auth
             <nav class="navbar-links">
                 <a href="" class="navbar-link"><img src="images/icons/notifications.svg" alt=""></a>
                 <a href="" class="navbar-link"><img src="images/icons/add.svg" alt=""></a>
                 <a href="" class="navbar-link"><img src="images/users/profil.jpg" alt=""></a>
-                <a class="dropdown-item" href="{{ route('logout') }}"
+                <a class="dropdown-item" href=""
                                     onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                     {{ __('Logout') }}

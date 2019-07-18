@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('layouts.head')
 <body>
-    <section id="">
+    <section id="swup">
         @if (\Request::route()->getName() == 'login' || \Request::route()->getName() == 'register')
             <section class="auth-wrapper">
                 <!-- --------------------------------- AUTH --------------------------------- -->

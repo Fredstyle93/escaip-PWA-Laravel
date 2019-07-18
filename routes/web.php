@@ -32,7 +32,14 @@
         Route::get('/home', 'HomeController@index')->name('home');
         Route::get('/profil', 'UsersController@showProfil')->name('profil');
     });
-
+    
+    Route::get('/users', function() {
+        return view('projects.index');
+    })->name('users.index');
+    
+    Route::get('/projects', function(){
+        return view('projects.index');
+    })->name('projects.index');
 // }
 
 // Route::get('detect', function()
